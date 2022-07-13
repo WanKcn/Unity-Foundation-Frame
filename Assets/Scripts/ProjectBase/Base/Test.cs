@@ -1,5 +1,13 @@
-public class Test
+using System;
+using UnityEngine;
+
+public class Test : MonoBehaviour
 {
+    private void Start()
+    {
+        TestAutoMono.GetInstance().Test();
+    }
+
     void Main()
     {
         GameManager.GetInstance();

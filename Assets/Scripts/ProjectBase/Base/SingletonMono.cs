@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class SingletonMono<T> : MonoBehaviour where T : MonoBehaviour
 {
+    // 多次继承，通过单例访问，instance指向最后一次创建的脚本对象
+    // 继承了MonoBehaviour的单例对象，需要自己保证唯一性
     private static T instance;
 
     public static T GetInstance()
